@@ -2,6 +2,10 @@ package com.in28minutes.java.oops.interfaces.sub;
 
 public class Parrot extends Bird{
 
+    public Parrot(){
+        super();
+    }
+
     // method from Flyable interface
     @Override
     public void fly() {
@@ -12,5 +16,10 @@ public class Parrot extends Bird{
     @Override
     public void speak() {
 
+    }
+
+    public static void main(String[] args) {
+
+        Parrot parrot = new Parrot();
     }
 }

@@ -3,6 +3,11 @@ package com.in28minutes.java.oops.interfaces.sub;
 import com.in28minutes.java.oops.interfaces.Flyable;
 
 public abstract class Bird implements Flyable {
+
+    public Bird(){
+        super();
+        System.out.println("Bird constructor");
+    }
 //	public void fly() {
 //		System.out.println("Bird is flying");
 //	}
@@ -18,4 +23,5 @@ public abstract class Bird implements Flyable {
     }
 
     public abstract void speak();
+
 }
