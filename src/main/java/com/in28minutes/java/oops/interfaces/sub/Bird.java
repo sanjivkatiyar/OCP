@@ -7,6 +7,8 @@ public abstract class Bird implements Flyable {
 //		System.out.println("Bird is flying");
 //	}
 
+    //public abstract void fly();
+
     static void someDefaultMethod(){
         System.out.println("Some static method");
     }
