@@ -11,7 +11,7 @@ public class PrintfExamples {
 		System.out.printf("%s is %d Years old", "Rithu", 5);// Rithu is 5 Years
 															// old
 
-		Predicate
+		//Predicate
 		// In the simplest form, string to be formatted starts with % followed
 		// by conversion indicator
 		// b - boolean c - char d - integer f - floating point s - string.
