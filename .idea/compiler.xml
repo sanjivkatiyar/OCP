@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaInterviewGuide" />
+        <module name="OCP" />
+        <module name="ocp11" />
       </profile>
     </annotationProcessing>
   </component>
