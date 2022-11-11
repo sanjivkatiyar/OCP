@@ -6,7 +6,7 @@ import java.lang.annotation.Target;
 
 //@Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.CONSTRUCTOR})
 //@Target({ElementType.FIELD, ElementType.PARAMETER})
-//@Target(ElementType.TYPE_USE)
+//@Target(ElementType.TYPE)               // if we un-comment line 8 & 9 compiler will show error on line 9 for duplicate
 @interface DataItem{}
 
 @DataItem class X{}

@@ -17,6 +17,9 @@ import java.util.List;
 //      b) uncomment "abuseVarargs()" method and its method call
 //          1. do it first without @SafeVarargs and observe the compiler warning
 //          2. insert @SafeVarargs and ond note the error go away
+// 5. The no-args constructor of Child invokes the no-args constructor of Parent.
+// If the no-args constructor of Parent is deprecated, while creating new instance of child the compiler will generate a warning.
+//
 
 
 
@@ -44,8 +47,10 @@ public class CommonBuiltInAnnotationsExtra {
     }
 
 //    @SuppressWarnings("deprecation")
+//    @SuppressWarnings({"deprication", "rawtypes"})     - ok
+//    @SuppressWarnings("deprication", "rawtypes")       - not okay
     public void testDeprecated(){
-        Book.print();
+        //Book.print();
     }
 
 //    @SuppressWarnings("unchecked")          // ignore warning relating to use of "raw type"
@@ -54,7 +59,11 @@ public class CommonBuiltInAnnotationsExtra {
         //Book.preview(new ArrayList());      // This is a raw type "new ArrayList<String>()" would be better
     }
 
-    @SafeVarargs
+    //Any time you invoke a method "OR" declare a method that uses varargs with a generic type,
+    // you will get an "unchecked" warning
+
+    //@SafeVarargs
+    //@SuppressWarnings("unchecked")
     static int abuseVarargs(List<Integer>... list){ // must have varargs and be private, static or final
         Object[] oa = list;
         oa[0] = Arrays.asList("uh-oh!");

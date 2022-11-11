@@ -25,7 +25,7 @@ enum Device{LAPTOP, PHONE}
     Class humanOrBot() default Human.class;
     Human extraInfo() default @Human;        // Note: "new" keyword never used for annotations
     String[] sites() default {"S", "K"};     // 1-D array only
-
+    //String city() default="";              // wrong way of defining default
 }
 
 // 2. Apply the annotation.

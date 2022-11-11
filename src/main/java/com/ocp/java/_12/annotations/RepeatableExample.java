@@ -12,11 +12,13 @@ public class RepeatableExample {
 
     @Repeatable(Batteries.class)
     @interface Battery{
-        String level();
-        boolean recharge();
+        String value();
+        boolean recharge() default true;
     }
 
-    @Battery(level="high", recharge=false)
-    @Battery(level="low", recharge=true)
+    @Battery(value="high", recharge=false)
+    @Battery(value="high", recharge=false)
+    @Battery(value="low", recharge=true)
+    //@Batteries(@Battery("loW"))
     class ElectricCar{}
 }

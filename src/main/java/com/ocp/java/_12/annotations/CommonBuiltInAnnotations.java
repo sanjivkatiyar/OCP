@@ -35,6 +35,12 @@ class Person implements Moveable{
     }*/
 
     @Override
+    //public boolean equals(Person p){         // compilation error must be Object
+    public boolean equals(Object p){
+        return true;
+    }
+
+    @Override
     public void move() {              // Note: Must be public, override cannot assign weaker privilege
         System.out.println("Moving");
     }
