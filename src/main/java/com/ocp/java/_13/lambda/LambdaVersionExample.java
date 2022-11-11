@@ -4,7 +4,7 @@ interface I{
     void m();                                 // A functional interface, i.e. it has only one method.
 }
 
-public class lambdaVersionExample {
+public class LambdaVersionExample {
 
     public static void main(String[] args) {
         I i = new I() {
