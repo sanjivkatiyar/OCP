@@ -51,5 +51,11 @@ class TestRainbow{
 
 }
 
+@interface IntTest{
+    int value();
+}
+
+@IntTest(2) class XX{}
+
 public class ShortHand {
 }
