@@ -1,4 +1,4 @@
-package com.ocp.java._13.lambda;
+package com.ocp.java._10.streamsandlambda.lambda;
 
 import java.util.function.BiPredicate;
 
