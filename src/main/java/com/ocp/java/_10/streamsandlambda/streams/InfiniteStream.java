@@ -19,8 +19,13 @@ public class InfiniteStream {
         // iterate(T seed, UnaryOperator<T> fn)
         // UnaryOperator is-a Function<T,T>
         // T apply(T t)
-        Stream<Integer> integerStream = Stream.iterate(2, n-> n+2);
+        Stream<Integer> integerStream = Stream
+                .iterate(2, n-> n+2)
+                .limit(10);   // limit() is a short-circuiting stateful intermediate operator (convert to finite stream)
 
-        integerStream.forEach(System.out::println);
+        integerStream.forEach(System.out::println);  // forEach is terminal operator
+
+
+
     }
 }
