@@ -2,6 +2,7 @@ package com.ocp.java._10.streamsandlambda.streams;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -78,9 +79,38 @@ public class TerminalOperationsCollect {
 
         // Instead of combining, let's group them
         Map<Integer, List<String>> map3 =
-                Stream.of("Sanjiv", "Kumar", "Katiyar", "Shreyas")
+                Stream.of("Sanjiv", "Kumar", "Kumar", "Katiyar", "Shreyas")
                         .collect(Collectors.groupingBy(String::length));                        // 4th argument caters this
-        System.out.println(map3);                 // {5=[Kumar], 6=[Sanjiv], 7=[Katiyar, Shreyas]}
+        System.out.println(map3);                 // {5=[Kumar, Kumar], 6=[Sanjiv], 7=[Katiyar, Shreyas]}
+
+        // What if we want to remove duplicate "Kumar"
+        Map<Integer, Set<String>> map4 =
+                Stream.of("Sanjiv", "Kumar", "Kumar", "Katiyar", "Shreyas")
+                        .collect(Collectors.groupingBy(String::length,
+                                Collectors.toSet()));      // return set instead of list
+        System.out.println(map4);                 // {5=[Kumar], 6=[Sanjiv], 7=[Shreyas, Katiyar]}
+
+        // What if we want sorted list
+        Map<Integer, List<String>> map5 =
+                Stream.of("Sanjiv", "Kumar", "Kumar", "Katiyar", "Shreyas")
+                        .collect(Collectors.groupingBy(String::length,
+                                TreeMap::new,
+                                Collectors.toList()));      // return set instead of list
+        System.out.println(map5);                 // {5=[Kumar], 6=[Sanjiv], 7=[Shreyas, Katiyar]}
+
+        // Special case of grouping where there are only two possible groups true and false
+
+        Stream<String> names = Stream.of("Sanjiv", "Kumar", "Kumar", "Katiyar", "Shreyas");
+        Map<Boolean, List<String>> partitionMap =
+                names.collect(Collectors.partitioningBy(stt -> stt.startsWith("S")));
+        System.out.println(partitionMap);                // {false=[Kumar, Kumar, Katiyar], true=[Sanjiv, Shreyas]}
+
+        // We can change the value from list to set
+        names = Stream.of("Sanjiv", "Kumar", "Kumar", "Katiyar", "Shreyas");
+        Map<Boolean, Set<String>> partitionMap1 =
+                names.collect(Collectors.partitioningBy(stt -> stt.startsWith("Z"),
+                        Collectors.toSet()));
+        System.out.println(partitionMap1);              // {false=[Shreyas, Katiyar, Kumar, Sanjiv], true=[]}
     }
 
 }
