@@ -45,6 +45,9 @@ public class PrimitiveStreams {
         intStream = IntStream.of(10,20,30);
         System.out.println(intStream.average().orElseGet(Math::random));
 
+        intStream = IntStream.of(10,20,30);
+        System.out.println(intStream.average().orElse(Double.NaN));
+
 
 
     }
