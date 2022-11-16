@@ -3,7 +3,7 @@ package com.ocp.java._04.arraysandcollections.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-class Dog{}
+
 public class PreGenerics {
 
     public static void main(String[] args) {

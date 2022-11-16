@@ -1,4 +1,4 @@
-package com.ocp.java.generics;
+package com.ocp.java._04.arraysandcollections.generics;
 
 import java.io.Serializable;
 import java.util.ArrayList;
