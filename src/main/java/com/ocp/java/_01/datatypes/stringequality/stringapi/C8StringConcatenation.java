@@ -1,4 +1,4 @@
-package com.ocp.java._01.datatypes.stringapi;
+package com.ocp.java._01.datatypes.stringequality.stringapi;
 
 public class C8StringConcatenation {
     public static void main(String[] args) {

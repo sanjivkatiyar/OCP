@@ -1,4 +1,5 @@
-package com.ocp.java._04.arraysandcollections.collections;
+/*
+package com.ocp.java._04.arraysandcollections.collections1;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -100,19 +101,25 @@ interface List<E> extends Collection<E> {
 	List<E> subList(int paramInt1, int paramInt2);
 }
 
-class ArrayList /* implements List<E>, RandomAccess */{
+class ArrayList */
+/* implements List<E>, RandomAccess *//*
+{
 	// implements RandomAccess, a marker interface, meaning it support fast -
 	// almost constant time - access
 	// Insertion and Deletion are slower compared to LinkedList
 }
 
-class Vector /* implements List<E>, RandomAccess */{
+class Vector */
+/* implements List<E>, RandomAccess *//*
+{
 	// Thread Safe - Synchronized Methods
 	// implements RandomAccess, a marker interface, meaning it support fast -
 	// almost constant time - access
 }
 
-class LinkedList /* implements List<E>, Queue */{
+class LinkedList */
+/* implements List<E>, Queue *//*
+{
 	// Elements are doubly linked - forward and backword - to one another
 	// Ideal choice to implement Stack or Queue
 	// Iteration is slower than ArrayList
@@ -164,14 +171,18 @@ interface NavigableSet<E> extends SortedSet<E> {
 
 // Order of Insertion : A, X , B
 // Possible Order of Storing : X, A ,B
-class HashSet /* implements Set */{
+class HashSet */
+/* implements Set *//*
+{
 	// unordered, unsorted - iterates in random order
 	// uses hashCode()
 }
 
 // Order of Insertion :A, X, B
 // Order of Storing : A, X, B
-class LinkedHashSet /* implements Set */{
+class LinkedHashSet */
+/* implements Set *//*
+{
 	// ordered - iterates in order of insertion
 	// unsorted
 	// uses hashCode()
@@ -179,7 +190,9 @@ class LinkedHashSet /* implements Set */{
 
 // Order of Insertion :A,C,B
 // Order of Storing : A,B,C
-class TreeSet /* implements Set,NavigableSet */{
+class TreeSet */
+/* implements Set,NavigableSet *//*
+{
 	// 3,5,7
 	// sorted - natural order
 	// implements NavigableSet
@@ -286,20 +299,28 @@ interface BlockingQueue<E> extends Queue<E> {
 
 //The elements of the priority queue are ordered 
 //according to their natural ordering
-class PriorityQueue /* implements Queue */{
+class PriorityQueue */
+/* implements Queue *//*
+{
 	// sorted - natural order
 
 }
 
-class ArrayDeque /*implements Deque*/{
+class ArrayDeque */
+/*implements Deque*//*
+{
 
 }
 
-class ArrayBlockingQueue /*implements BlockingQueue*/{
+class ArrayBlockingQueue */
+/*implements BlockingQueue*//*
+{
 	//uses Array - optionally-bounded
 }
 
-class LinkedBlockingQueue /*implements BlockingQueue*/{
+class LinkedBlockingQueue */
+/*implements BlockingQueue*//*
+{
 	//uses Linked List - optionally-bounded
 	
 	//Linked queues typically have higher throughput than array-based queues but
@@ -407,19 +428,25 @@ interface NavigableMap<K, V> extends SortedMap<K, V> {
 	NavigableSet<K> descendingKeySet();
 }
 
-class HashMap /* implements Map */{
+class HashMap */
+/* implements Map *//*
+{
 	// unsorted, unordered
 	// key's hashCode() is used
 }
 
-class Hashtable /* implements Map */{
+class Hashtable */
+/* implements Map *//*
+{
 	// Synchronized - Thread Safe - version of HashMap
 	// unsorted, unordered
 	// key's hashCode() is used
 	// HashMap allows a key with null value. Hashtable doesn't.
 }
 
-class LinkedHashMap /* implements Map */{
+class LinkedHashMap */
+/* implements Map *//*
+{
 	// insertion order is maintained (optionally can maintain access order as
 	// well)
 	// slower insertion and deletion
@@ -428,10 +455,13 @@ class LinkedHashMap /* implements Map */{
 
 // A,C,B
 // A,B,C
-class TreeMap /* implements Map,NavigableMap */{
+class TreeMap */
+/* implements Map,NavigableMap *//*
+{
 	// sorted order is maintained
 	// implements NavigableMap
 }
 
 public class CollectionHierarchy {
 }
+*/

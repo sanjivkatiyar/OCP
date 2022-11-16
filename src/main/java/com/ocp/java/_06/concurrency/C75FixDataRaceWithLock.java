@@ -10,7 +10,7 @@ public class C75FixDataRaceWithLock {
 
     private static Lock lock = new ReentrantLock();
 
-    public static void addToCounter(){
+    public static void addToCounter() {
         if (lock.tryLock()) {
             //lock.lock();
             try {
@@ -27,8 +27,10 @@ public class C75FixDataRaceWithLock {
     }
 
     public static void main(String[] args) {
-        for(int i=1; i<=10; i++){
+        for (int i = 1; i <= 10; i++) {
             new Thread(C75FixDataRaceWithLock::addToCounter).start();
+
+
         }
     }
 }

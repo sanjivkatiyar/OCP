@@ -1,4 +1,4 @@
-package com.ocp.java._04.arraysandcollections.collections;
+package com.ocp.java._04.arraysandcollections.collections1;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class UsingQueues {
 
     public static void linkedListQueue(){
         // A FIFO queue (First in First out)
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList();
         // add() inserts into queue (throws exception if no space exists - if capacity restricted)
         // offer() inserts into queue (returns false if no space exists - capacity restricted)
         queue.add(1);

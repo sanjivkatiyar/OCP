@@ -1,4 +1,4 @@
-package com.ocp.java._04.arraysandcollections.collections;
+package com.ocp.java._04.arraysandcollections.collections1;
 
 import java.util.*;
 import java.util.stream.Collectors;

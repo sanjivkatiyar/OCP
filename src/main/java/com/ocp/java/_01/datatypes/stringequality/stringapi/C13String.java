@@ -1,4 +1,4 @@
-package com.ocp.java._01.datatypes.stringapi;
+package com.ocp.java._01.datatypes.stringequality.stringapi;
 
 import javax.sound.midi.Soundbank;
 import java.util.Locale;

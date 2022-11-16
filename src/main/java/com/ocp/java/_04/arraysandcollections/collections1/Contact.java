@@ -1,4 +1,4 @@
-package com.ocp.java._04.arraysandcollections.collections;
+package com.ocp.java._04.arraysandcollections.collections1;
 
 public class Contact {
     private int age;
