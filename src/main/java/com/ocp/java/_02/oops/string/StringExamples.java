@@ -40,6 +40,8 @@ public class StringExamples {
 		// char charAt(int paramInt)
 		System.out.println(str.charAt(2)); // prints a char - c
 
+		// System.out.println(str.charAt('c'));   //legal promoted to int
+
 		// String concat(String paramString)
 		System.out.println(str.concat("lmn"));// abcdefghijklmn
 

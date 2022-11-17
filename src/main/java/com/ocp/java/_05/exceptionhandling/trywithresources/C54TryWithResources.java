@@ -9,7 +9,7 @@ public class C54TryWithResources {
         ex1();
     }
     public static void ex1() throws IOException {
-        // no catch or finally block required. finally is implicit
+        // no catch or finally block required. finally, is implicit
         // However, method must declare that it throws exception
         // out closes first then in
         try(FileInputStream in = new FileInputStream("in.txt");
