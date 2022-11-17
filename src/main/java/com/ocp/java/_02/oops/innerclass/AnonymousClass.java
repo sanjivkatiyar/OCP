@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 class Animal {
-	void bark() {
-		System.out.println("Animal Bark");
-	}
+    void bark() {
+        System.out.println("Animal Bark");
+    }
 };
 
 public class AnonymousClass {
@@ -29,10 +29,10 @@ public class AnonymousClass {
 
 	public static void main(String[] args) {
 
-		String[] array = { "Apple", "Cat", "Boy" };
+		String[] array = {"Apple", "Cat", "Boy"};
 
 		System.out.println(Arrays.toString(reverseSort(array)));// [Cat, Boy,
-																// Apple]
+		// Apple]
 
 		/* Second Anonymous Class - SubClass of Animal */
 		Animal animal = new Animal() {
@@ -46,3 +46,22 @@ public class AnonymousClass {
 	}
 
 }
+
+abstract class SomeClass {
+
+	public abstract void m1();
+}
+
+class TestClass {
+
+	public static class StaticInnetClass {
+	}  //option 1
+
+	public SomeClass getSomeClass() {
+		return new SomeClass() {                 // Anonymous inner class extends abstract class
+			public void m1() {
+			}
+		};
+	}
+}
+

@@ -2,10 +2,14 @@
 package com.ocp.java._02.oops.innerclass;
 class OuterClass {
 	private int outerClassInstanceVariable;
+	public int publicOuterClassInstanceVariable;
 
 	public void exampleMethod() {
 		int localVariable;
 		final int finalVariable = 5;
+
+		// static class MethodLocalStaticInnerClass{}     // method local inner class can not be static
+		// interface I {}           // method local interface are supported in java 16
 
 		class MethodLocalInnerClass {
 			public void method() {
@@ -38,8 +42,9 @@ class OuterClass {
 			this.staticNestedClassVariable = staticNestedClassVariable;
 		}
 
-		public void privateVariablesOfOuterClassAreNOTAvailable() {
+		public void nonStaticVariablesOfOuterClassAreNOTAvailable() {
 			// outerClassInstanceVariable = 5; //COMPILE ERROR
+			// publicOuterClassInstanceVariable =4; // should be static
 		}
 	}
 
@@ -69,6 +74,37 @@ class OuterClass {
 		// Just use the inner class name to create it
 		InnerClass inner = new InnerClass();
 	}
+
+	private class PrivateInnerClass{
+		// public static print(){ }           // Static methods are not allowed in non-static inner class
+		// static int TT = 5;                 // not allowed
+		final static int TT = 5;              // allowed if final
+
+	}
+
+	class DefaultInnerClass{
+
+		class AnotherInnerClass{}
+		// static class AnotherStaticInnerClass{}  // Supported in java 16
+	}
+
+	protected class ProtectedInnerClass{}
+
+	private static class PrivateStaticInnerClass{
+
+		class OneMoreClass{}
+		static class OneMoreInnerClass{}           // static inner class not have another level of static inner class
+	}
+
+	protected static class ProtectedStaticInnerClass{}
+
+	static class DefaultStaticInnerClass{}
+
+	interface I {}
+
+	static interface II {}
+
+
 
 }
 
