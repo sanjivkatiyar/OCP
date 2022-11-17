@@ -34,4 +34,14 @@ public class C22LabeledBreakAndContinue {
             // break OUTERLOOP; // not ok label must be within the loop
         }
     }
+
+
+
+    void crazyLoop(){
+        var c = 0;
+        JACK: while (c < 8){
+            JILL: System.out.println(c);
+            if (c > 3) break JACK; else c++;   // ok can not break to JILL
+        }
+    }
 }

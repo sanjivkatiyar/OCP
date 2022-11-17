@@ -81,3 +81,11 @@ class Tablet extends Computer{
 
 }
 //  In Java fields are initialized before the constructor.
+class HeHe{
+    int a;
+    HeHe(int a){
+        this.a=a;
+    }
+}
+
+// class HaHa extends HeHe{}       // need to create a constructor matching super
