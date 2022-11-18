@@ -57,6 +57,9 @@ public class StringExamples {
 
 		// All characters from index paramInt
 		// String substring(int paramInt)
+
+		//beginIndex - the beginning index, inclusive.
+		//endIndex - the ending index, exclusive.
 		System.out.println("abcdefghij".substring(3)); // defghij
 		// 0123456789
 

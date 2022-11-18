@@ -93,6 +93,12 @@ public class ExceptionHandlingExample1 {
 	private static void method1() {
 		method2();
 		System.out.println("Line after Exception - Method 1");
+
+		try {
+			throw new CustomException();
+		} catch (Throwable e) {                   // any Throwable type can be caught
+			e.printStackTrace();
+		}
 	}
 
 	private static void method2() {
@@ -108,6 +114,10 @@ public class ExceptionHandlingExample1 {
 			// 3
 		}
 	}
+}
+
+class CustomException extends Throwable{
+
 }
 
 // Connection Opened
