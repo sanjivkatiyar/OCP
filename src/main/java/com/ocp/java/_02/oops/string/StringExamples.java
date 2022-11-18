@@ -75,5 +75,9 @@ public class StringExamples {
 
 		// trim removes leading and trailings spaces
 		System.out.println(" abcd  ".trim()); // abcd
+
+		String String = "abc".toUpperCase();        // . operator allowed on String
+
+		System.out.println();
 	}
 }
