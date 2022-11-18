@@ -27,6 +27,7 @@ public class C4WideningAndNarrowing {
         char c1 = (short)98;         // 'b' chars can be assigned to short and vice-a-versa provided they are
                                     // they are within the range
         short s1 = 'a';              // 97 is in the range of short
+
         char c2 = 'a';               // chars in single quotes (unicode 97)
         // short s2 = c;            // does not work with variables unless c is a compile-time constant
         final char c3 = 'a';        // c3 is "final" i.e. a compile-time constant.

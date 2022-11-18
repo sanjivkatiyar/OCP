@@ -32,7 +32,7 @@ public class C10LogicalOperators {
         boolean f2 = (5>10) ^ (10<20);
         System.out.println(f1 + " " + f2);    // false true
 
-        System.out.println(3&5);
+        System.out.println(3&5);              // 1 ??
 
     }
 }
