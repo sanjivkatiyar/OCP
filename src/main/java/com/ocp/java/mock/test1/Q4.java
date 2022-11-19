@@ -27,7 +27,8 @@ public class Q4 {
          return null; }},
          new AccessControlContext(
          new ProtectionDomain[] {
-         new ProtectionDomain(null, perms) } ) );
+         new ProtectionDomain(null, perms) }
+         ) );
          */
     }
 }
