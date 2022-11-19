@@ -1,4 +1,4 @@
-package com.ocp.java.mock;
+package com.ocp.java.mock.test1;
 
 interface Flyer {
     String getName();
@@ -22,7 +22,7 @@ class Eagle extends Bird {
     }
 }
 
-public class Test1 {
+public class Q1 {
 
     public static void main(String[] args) throws Exception {
         Flyer f = new Eagle("American Bald Eagle");         //PRINT NAME HERE    }
@@ -41,6 +41,7 @@ public class Test1 {
 
         System.out.println(f.getName());
         System.out.println(((Eagle)f).name);
+        System.out.println(((Bird)f).name);
         System.out.println(((Bird)f).getName());
         //System.out.println(f.name);
         //System.out.println(Eagle.name);
