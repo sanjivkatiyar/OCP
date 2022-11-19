@@ -7,7 +7,7 @@ public class C27CallByValue {
         int age = 20;
         Adult john = new Adult("John", age);
         change(john, age);
-        System.out.println(john.getName()+" "+age);
+        System.out.println(john.getName()+" " + john.getAge()+" "+age);  // Michael 20 20
     }
 
     public static void change(Adult adult, int age){

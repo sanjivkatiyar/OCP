@@ -5,22 +5,25 @@ import java.util.ArrayList;
 public class C30Immutable {
     public static void main(String[] args) {
         ImmutablePerson p1 = new ImmutablePerson("Joe Bloggs", 23);
-        System.out.println(p1);
+        System.out.println(p1);  // ImmutablePerson@58372a00
         ImmutablePerson p2 = new ImmutablePerson("Mary Bloggs", 24);
-        System.out.println(p2);
+        System.out.println(p2);  // ImmutablePerson@4dd8dc3
         p1 = p2;
-        System.out.println(p1);
+        System.out.println(p1);  // ImmutablePerson@4dd8dc3
+
+        ImmutablePerson p3 = new ImmutablePerson("Joe Bloggs", 23);
+        System.out.println(p3);  // ImmutablePerson@6d03e736
 
         ArrayList<String> employees = new ArrayList<>();
         employees.add("Ann");
         employees.add("Liam");
 
         Department dept = Department.createInstance("Argos", "Athlone", 2, employees);
-        System.out.println("Created: " + dept.toString());
+        System.out.println("Created: " + dept.toString());  // Created: name: Argos address: Athlone numEmployees: 2 employees: [Ann, Liam]
 
         employees.add("Sanjiv");
-        System.out.println("Created: " + dept.toString());
-        System.out.println("Created: " + dept.getEmployees());
+        System.out.println("Created: " + dept.toString());   // Created: name: Argos address: Athlone numEmployees: 2 employees: [Ann, Liam]
+        System.out.println("Created: " + dept.getEmployees()); // Created: [Ann, Liam]
 
     }
 }

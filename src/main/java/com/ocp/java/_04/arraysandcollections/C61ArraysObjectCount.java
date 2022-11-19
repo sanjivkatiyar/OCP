@@ -10,4 +10,6 @@ public class C61ArraysObjectCount {
         //here, how may objects are created and how many are ready for garbage collection
     }
 }
-class X{private Integer[] s = {1,2,3,4};}
+class X{
+    private Integer[] s = {1,2,3,4};
+}

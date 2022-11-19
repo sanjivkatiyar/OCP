@@ -7,7 +7,8 @@ import java.util.Locale;
 // Java has only the following primitive data types:
 // boolean, byte, short, char, int, long, float and double
 // reverse is not a string method
-// String is a final class and final classes cannot be extended
+// StringBuilder has reverse method
+// String , StringBuilder, StringBuffer are final class and final classes cannot be extended
 public class C13String {
     public static void main(String[] args) {
         refVersusObjects();

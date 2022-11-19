@@ -5,7 +5,7 @@ package com.ocp.java._03.controllingprogramflow.breakandcontinue;
 public class C21BreakAndContinue {
     public static void main(String[] args) {
        // nestedLoop();
-       // normalBreak();
+       normalBreak();
        // normalContinue();
         unreachableCode();
     }

@@ -20,10 +20,9 @@ public class C20ForEach {
             System.out.println(car);
         }
 
-        for(String car:cars){       // var is ok
+        for(var car:cars){       // var is ok
             System.out.println(car);
         }
-
 
         List<String> trucks = new ArrayList<>();
         trucks.add("Ram");

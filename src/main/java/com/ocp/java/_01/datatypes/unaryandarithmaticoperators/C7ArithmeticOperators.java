@@ -5,17 +5,17 @@ public class C7ArithmeticOperators {
         int x = 10, y =3;
         int div = x/y;    // integer division truncates
         int mod = x%y;    // keep reminder only
-        System.out.println(div + " " + mod);
-        System.out.println(0%3);
+        System.out.println(div + " " + mod);      // 3 1
+        System.out.println(0%3);                  // 0
 
         // precedence
 
         int res = 3 + 2 * 4;
-        System.out.println(res);
+        System.out.println(res);                 // 11
         res = (3+2) * 4;
-        System.out.println(res);
+        System.out.println(res);                 // 20
         res = 6 + 4 - 2;
-        System.out.println(res);
+        System.out.println(res);                 // 8
         res = 10 / 4 * 6;            // 12 as 10/4 = 2 (keep integer)
         System.out.println(res);
 
@@ -26,7 +26,7 @@ public class C7ArithmeticOperators {
         System.out.println(b5);
 
         // modular operator can be applied on float as well.
-        System.out.println(4.3%4);
+        System.out.println(4.3%4);              // 0.2999999999999998
 
     }
 }

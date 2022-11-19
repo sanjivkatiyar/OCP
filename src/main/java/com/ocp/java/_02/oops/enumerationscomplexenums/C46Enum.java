@@ -9,6 +9,8 @@ public class C46Enum {
         System.out.println(d);
         System.out.println(d==Direction.EAST);        // true as they are immutable
         System.out.println(d.equals(Direction.EAST)); // true
+        Direction d2 = Direction.EAST;
+        System.out.println(d2==d);                    // true
 
         /*switch(d){
             case EAST -> System.out.println("EAST");
@@ -18,7 +20,8 @@ public class C46Enum {
         }*/
         // if(Direction.WEST == 3)                    // Direction vs int
         Direction d1 = Direction.valueOf("EAST");
-        System.out.println(d1);
+        System.out.println(d1);                       // EAST
+        //System.out.println(Direction.valueOf("SANJIV"));                       // Illegal Argument exception
 
         for(Direction direction:Direction.values()){
             System.out.println(direction.ordinal()+", "+direction.name());

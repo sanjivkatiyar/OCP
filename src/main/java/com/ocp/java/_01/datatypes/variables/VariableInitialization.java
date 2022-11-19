@@ -1,6 +1,6 @@
 package com.ocp.java._01.datatypes.variables;
 
-//RULE1 :Member/Static variables are alway initialized with 
+//RULE1 :Member/Static variables are always initialized with
 //default values.Default values for numeric types is 0, 
 //floating point types is 0.0, boolean is false, 
 //char  is '\u0000' and object reference variable is null.

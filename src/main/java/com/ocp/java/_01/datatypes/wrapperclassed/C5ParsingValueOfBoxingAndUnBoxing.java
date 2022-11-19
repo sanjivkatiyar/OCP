@@ -8,10 +8,12 @@ public class C5ParsingValueOfBoxingAndUnBoxing {
         int i = Integer.parseInt("33"); // parseInt returns an int
         double d = Double.parseDouble("2.3");
         float f = Float.parseFloat("4.4");
+        float f1 = Float.parseFloat("4.4f");
 
-        System.out.println("i: " + i);
-        System.out.println("d: " + d);
-        System.out.println("f: " + f);
+        System.out.println("i: " + i);  // i: 33
+        System.out.println("d: " + d);  // d: 2.3
+        System.out.println("f: " + f);  // f: 4.4
+        System.out.println("f1: " + f1);  // f1: 4.4
 
         // valueOf() preferred to using constructors (memory)
         Integer iw = Integer.valueOf(2); // better than using a constructor
@@ -19,17 +21,17 @@ public class C5ParsingValueOfBoxingAndUnBoxing {
         Integer iw2 = Integer.valueOf("22"); // overloaded
         Integer iw3 = Integer.valueOf("F", 16); // "F" treated as hex (base 16)
 
-        System.out.println("iw: " + iw);
-        System.out.println("iw1: " + iw1);
-        System.out.println("iw2: " + iw2);
-        System.out.println("iw3: " + iw3);
+        System.out.println("iw: " + iw);     // iw: 2
+        System.out.println("iw1: " + iw1);   // iw1: 2
+        System.out.println("iw2: " + iw2);   // iw2: 22
+        System.out.println("iw3: " + iw3);   // iw3: 15
 
         // boxing/unboxing
         Integer x = 3; // auto-boxing
         int i1 = Integer.valueOf(3); // auto-unboxing
 
-        System.out.println("x: " + x);
-        System.out.println("i1: " + i1);
+        System.out.println("x: " + x);       // x: 3
+        System.out.println("i1: " + i1);     // x: 3
     }
 
     long primitive() {
@@ -71,7 +73,7 @@ public class C5ParsingValueOfBoxingAndUnBoxing {
         lo = (short) 1;
         lo = 1;
         lo = 2147483648L;
-        lo = (long) 3.14f;
+        lo = (int) 3.14f;
         lo = (long) 3.14;
         lo = 'a';
 

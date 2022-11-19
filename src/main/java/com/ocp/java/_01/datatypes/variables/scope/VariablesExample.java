@@ -7,6 +7,16 @@ public class VariablesExample {
 	// RULE 2:Member Variable can be used in any non-static method.
 	int memberVariable;
 
+	static {
+		// memberVariable = 5;// RULE 2
+		staticVariable = 5;// RULE 1
+	}
+
+	{
+		memberVariable = 5;// RULE 2
+		staticVariable = 5;// RULE 1
+	}
+
 	void method1() {
 		// RULE 3: method1LocalVariable can be used only in method1.
 		int method1LocalVariable;
@@ -18,8 +28,12 @@ public class VariablesExample {
 		{
 			// RULE 4:blockVariable can be used only in this block.
 			int blockVariable;
+			memberVariable = 5;// RULE 2
+			staticVariable = 5;// RULE 1
 			// Some Code
 		}
+
+
 
 		// blockVariable = 5;//COMPILER ERROR - RULE 4
 	}

@@ -2,7 +2,7 @@ package com.ocp.java._04.arraysandcollections;
 
 public class C60TwoDArray {
     public static void main(String[] []args) {
-        System.out.println(args[0][1]);
+        System.out.println(args[0][1]);   // b
     }
 
     public static void main(String[] args) {

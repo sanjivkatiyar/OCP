@@ -3,6 +3,7 @@ package com.ocp.java._02.oops.innerclass;
 class OuterClass {
 	private int outerClassInstanceVariable;
 	public int publicOuterClassInstanceVariable;
+	public static int outerClassClassVariable;
 
 	public void exampleMethod() {
 		int localVariable;
@@ -13,8 +14,9 @@ class OuterClass {
 
 		class MethodLocalInnerClass {
 			public void method() {
-				// Can access class instance variables
+				// Can access class/instance variables of outer class
 				System.out.println(outerClassInstanceVariable);
+				System.out.println(outerClassClassVariable);
 
 				// Cannot access method's non-final local variables
 				// localVariable = 5;//Compiler Error
@@ -45,6 +47,7 @@ class OuterClass {
 		public void nonStaticVariablesOfOuterClassAreNOTAvailable() {
 			// outerClassInstanceVariable = 5; //COMPILE ERROR
 			// publicOuterClassInstanceVariable =4; // should be static
+			System.out.println(outerClassClassVariable);    // static is fine
 		}
 	}
 

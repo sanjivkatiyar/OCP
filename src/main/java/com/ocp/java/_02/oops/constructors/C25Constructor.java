@@ -1,7 +1,7 @@
 package com.ocp.java._02.oops.constructors;
 
 // A constructor can be declared private.
-// A constructor can access the non-static members of a class.
+// A constructor can access the instance and non-static members of a class.
 // A default no args one will be provided if not defined any.
 // All non-final instance variables get default values if not explicitly initialized.
 // A constructor is non-static,
@@ -10,6 +10,7 @@ package com.ocp.java._02.oops.constructors;
 // construction can not be inheritted so no need to make it final (can not be final)
 // Constructor becomes a valid method if return type is specified
 public class C25Constructor {
+
     public static void main(String[] args) {
         Dog d = new Dog();
         Cat c = new Cat();
@@ -31,8 +32,10 @@ class Cat{
 
 class Mouse{
     private String theName;
+    static int i;
     Mouse(){
         theName="";
+        i = 100;
     }
     Mouse(String aName){
         theName= aName;
@@ -81,6 +84,9 @@ class Tablet extends Computer{
 
 }
 //  In Java fields are initialized before the constructor.
+
+
+
 class HeHe{
     int a;
     HeHe(int a){
