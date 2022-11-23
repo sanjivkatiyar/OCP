@@ -1,4 +1,5 @@
 package com.ocp.java._03.controllingprogramflow.switchstatements;
+
 // Only String, byte, char, short, int, (and their wrapper classes Byte, Character, Short, and Integer),
 // and enums can be used as types of a switch variable. String is allowed since Java 7.
 // long, float, double, and boolean can never be used as a switch variable.
@@ -38,10 +39,12 @@ public class C16Switch {
 
         }
     }
-    public static void switchExample2(String sport){
-        switch(1) {} //valid
 
-        switch(sport) {
+    public static void switchExample2(String sport) {
+        switch (1) {
+        } //valid
+
+        switch (sport) {
 
             case "Soccer":
                 System.out.println("I play soccer");
@@ -54,9 +57,8 @@ public class C16Switch {
         }
     }
 
-    public static void switchExample3()
-    {
-        byte x = (byte)4; // var is byte => -128..+127
+    public static void switchExample3() {
+        byte x = (byte) 4; // var is byte => -128..+127
        /* switch(x){
             case -130: //out of range
             case 130:  //out of range
@@ -68,7 +70,7 @@ public class C16Switch {
         }*/
 
         Integer n = Integer.valueOf("4");
-        switch(n){
+        switch (n) {
             case 4: // entry point, keep going until "break" or end of loop
                 System.out.println("4");
             case 6:
@@ -78,17 +80,17 @@ public class C16Switch {
         }
     }
 
-    public static void implicitCasting(){
-        byte b=4;
+    public static void implicitCasting() {
+        byte b = 4;
         final int ic = 10; // compile time constant
         final int id = 200; // value beyond byte limit
         int i = 10;        // not a constant, value may be beyond limit at run time
         final int c;        // not initialized
         c = 20;             // initialized at run time
         Byte byteW = 30;     // initialized at runtime like Byte iw = new Byte(10);
-        final int I = 2*3;
+        final int I = 2 * 3;
 
-        switch(b){
+        switch (b) {
             case ic:        // compile time constant
 //            case id:      // value beyond byte limit
 //            case i:       // not a compile time constant
@@ -97,6 +99,7 @@ public class C16Switch {
 //            case b:       // not a compile time constant
             case 3:          // compile time constant
             case I:         // int is okay with in limit
+
 
         }
     }
