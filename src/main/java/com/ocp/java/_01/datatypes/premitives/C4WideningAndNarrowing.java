@@ -10,6 +10,13 @@ public class C4WideningAndNarrowing {
         float f1 = 1L;              // long promoted to float
 
         int i2 = (int)3.3;          // double cast to int
+        int Amount1 = 0b11;
+        // int amount2 = 9L;
+        int amount3 = 0xE;
+        // int amount4 = 1_2.0;
+        // double amount5 = 1_0_.0;
+        int amount6 = 0b101;
+        double amount7 = 9_2.1_2;
         byte b1 = (byte)120;        // cast actually not needed here
         byte b2 = 120;              // compiler "knows" int literal is in range
         // float f1 = 3.45;         // double to float cast needed
@@ -37,7 +44,27 @@ public class C4WideningAndNarrowing {
         System.out.println("s1: " + s1); // s1: 97
         System.out.println("c2: " + c2); // c2: a
         System.out.println("c3: " + c3); // c3: a
-        System.out.println("S3: " + S3); // S3: 97
+        System.out.println("S3: " + S3); // S3:
 
+        //var _ = 6000_.0;
+        //var null = 6_000;
+        var $_ = 6_000;
+        var $2 = 6_000f;
+        var var = 3_0_00.0;
+        //var #CONS = 2_000.0;
+        System.out.println($2);
+
+
+        short x = 10;
+        short y = 3;
+        // short z = x * y // compilation error, should be int
+
+        double xx = 39.21;
+        //float yy = 2.1;    // should be ending with f or F
+        float yy = 2.1F;
+        // float zz = xx + yy; // should be double
+        double zzz = xx + yy;
+        //System.out.println(zz);
+        System.out.println(zzz);
     }
 }
