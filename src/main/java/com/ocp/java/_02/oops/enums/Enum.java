@@ -3,13 +3,13 @@ package com.ocp.java._02.oops.enums;
 //Enum can be declared outside a class
 enum SeasonOutsideClass {
 	WINTER, SPRING, SUMMER, FALL
-};
+}
 
 public class Enum {
 	// Enum can be declared inside a class
 	enum Season {
 		WINTER, SPRING, SUMMER, FALL
-	};
+	}
 
 	public static void main(String[] args) {
 		/*
@@ -41,5 +41,20 @@ public class Enum {
 		Season season2 = Season.FALL;
 		System.out.println(season1 == season2);// true
 		System.out.println(season1.equals(season2));// true
+	}
+}
+
+enum OnlyOne {
+	ONCE(true), TWO(false);
+	private OnlyOne(boolean b) {
+		System.out.print("constructing, ");
+	}
+}
+class PrintTheOne {
+	public static void main(String[] args) {
+		System.out.print("begin, ");
+		OnlyOne firstCall = OnlyOne.ONCE; // prints constructing,
+		OnlyOne secondCall = OnlyOne.ONCE; // doesn't print anything
+		System.out.print("end");
 	}
 }
