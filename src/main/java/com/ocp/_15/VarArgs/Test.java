@@ -25,6 +25,22 @@ public class Test {
 
 }
 
+class Account {
+
+    void display(int accountId, int... amount){
+        int sum=0;
+        for(int x:amount){
+            sum+=x;
+        }
+        System.out.println("The sum is: "+accountId+sum);     // he sum is: 1001230
+    }
+
+    public static void main(String[] args) {
+        Account account=new Account();
+        account.display(1001,20,30,40,60,80);
+    }
+}
+
 /*
 
 The three periods after the parameter's data type shows that it can be passed as an array or sequence of arguments.
