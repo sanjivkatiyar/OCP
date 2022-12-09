@@ -7,7 +7,7 @@ enum Day {
     SUNDAY(1), MONDAY(2), TUESDAY(3), WEDNESDAY(4), THURSDAY(5), FRIDAY(6), SATURDAY(7);
     private int value;
 
-    private Day(int value) {
+    private Day(int value) {                       // constructor is private by default
         this.value = value;
     }
 
@@ -21,6 +21,9 @@ class UserInterface {
         //printing all constants of an enum
         for (Day day : Day.values())
             System.out.println("Day:" + day.name() + " Value:" + day.getValue());
+
+        System.out.println(Day.valueOf("SUNDAY"));
+        System.out.println(Day.valueOf("Sanjiv"));          // Illegal argument exception
     }
 }
 
@@ -32,5 +35,7 @@ All the constants are static and final implicitly.
 All enums implicitly extend java.lang.Enum class.
 Constructors, methods, and variables in an enum can be defined
 as enums are reference data type like class or interface.
+We need the enum constructor to be private because enums define a finite set of values (SMALL, MEDIUM, LARGE).
+If the constructor was public, people could potentially create more value.
 
  */
