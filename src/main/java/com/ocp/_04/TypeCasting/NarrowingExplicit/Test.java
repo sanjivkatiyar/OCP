@@ -16,6 +16,13 @@ public class Test {
         System.out.println("short value :" + s);     // 234
         System.out.println("byte value :" + b);      // -22
     }
+
+    int methodA(byte x, double y) //line2
+    {
+        return (short)(x / y * 2);
+        // return (short)x / y * 2;                  // compilation error double
+
+    }
 }
 
 // byte -> short -> int -> long -> float -> double

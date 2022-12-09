@@ -6,6 +6,7 @@ public class Test {
         int i = 300;
         long l = i;       //no explicit type casting
         float f = l;      //no explicit type casting
+        double price=30.0f;
         System.out.println("int value :"+i);
         System.out.println("long value :"+l);
         System.out.println("float value :"+f);
