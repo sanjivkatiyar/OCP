@@ -1,5 +1,7 @@
 package com.ocp._04.TypeCasting.NarrowingExplicit;
 
+import java.sql.SQLException;
+
 public class Test {
 
     public static void main(String[] args) {
@@ -21,6 +23,7 @@ public class Test {
     {
         return (short)(x / y * 2);
         // return (short)x / y * 2;                  // compilation error double
+
 
     }
 }
